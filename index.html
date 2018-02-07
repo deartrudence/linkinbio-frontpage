@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Link in Bio</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="./styles.css">
+	<script type="text/javascript" src="//fast.fonts.net/jsapi/09f75a11-819f-49b2-84f3-8dfdad22c4ec.js"></script>
+	<!-- <script type="text/javascript" src="//fast.fonts.net/jsapi/09f75a11-819f-49b2-84f3-8dfdad22c4ec.js"></script>` -->
+	<link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/09f75a11-819f-49b2-84f3-8dfdad22c4ec.css" />
+</head>
+
+<body>
+	<nav>
+		<ul>
+			<li><a href="#">See Example</a></li>
+		</ul>
+	</nav>
+	<header>
+		<div class="content">
+			<h1>Linkinbio</h1>
+			<p>One link for all your posts.</p>
+			<button class="sign-up button">Sign up</button>
+		</div>
+
+		<!-- Modal Sign up -->
+		<div class="modal hidden" id="">
+			<h2>Sign up</h2>
+			<p>Sign up to learn more.</p>
+			<div class="form-wrapper">
+				<form id="sign-up" enctype="application/json" action="https://script.google.com/macros/u/1/s/AKfycbwVIoJvPnRT3eLdkldOD5iHAnWt2ZtKdaT30hWXhc7ioXLu_v6A/exec"
+					method="post">
+					<label for="email">Email</label>
+					<input id="email" name="Email" placeholder="example@gmail.com">
+					<label for="name">Name</label>
+					<input id="name" name="Name" placeholder="Abed Nadir">
+					<input class="log-in button" type="submit" value="Sign up">
+				</form>
+			</div>
+			<p class="close"><img src="./images/close.svg" alt=""></p>
+		</div>
+		<div class="modal--overlay hidden"></div>
+	</header>
+	<!-- /modal sign up -->
+
+	<!-- Photo Grid -->
+
+	<div class="wrapper">
+		<div class="photo">
+			<img src="./images/woman.png" alt="Woman in hat">
+		</div>
+		<div class="photo">
+			<img src="./images/doggie.png" alt="Doggie">
+		</div>
+		<div class="photo">
+			<img src="./images/girlbeach.png" alt="Girls jumping on a beach">
+		</div>
+		<div class="photo">
+			<img src="./images/ski.png" alt="Man cross country skiing">
+		</div>
+		<div class="photo">
+			<img src="./images/tokyo.png" alt="Man on phone in Tokyo">
+		</div>
+		<div class="photo">
+			<img src="./images/coffee.png" alt="2 capuccinos">
+		</div>
+		<div class="photo">
+			<img src="./images/food.png" alt="Veggies and eggs on a chopping board">
+		</div>
+		<div class="photo">
+			<img src="./images/pool.png" alt="Woman floating in pool">
+		</div>
+		<div class="photo">
+			<img src="./images/girlnyc.png" alt="Woman in snowy NYC">
+		</div>
+		<div class="photo">
+			<img src="./images/chicken.png" alt="Friend chicken sandwich">
+		</div>
+		<div class="photo">
+			<img src="./images/wedding.png" alt="Bride and Groom">
+		</div>
+		<div class="photo">
+			<img src="./images/bikini.png" alt="Bikini, sunglasses, and passport">
+		</div>
+		<div class="photo">
+			<img src="https://picsum.photos/220?image=800" alt="random">
+		</div>
+	</div>
+
+	<!-- /photo grid -->
+
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	crossorigin="anonymous"></script>
+
+<script>
+	!function (e, i) { if ("function" == typeof define && define.amd) define(["exports", "jquery"], function (e, r) { return i(e, r) }); else if ("undefined" != typeof exports) { var r = require("jquery"); i(exports, r) } else i(e, e.jQuery || e.Zepto || e.ender || e.$) }(this, function (e, i) { function r(e, r) { function n(e, i, r) { return e[i] = r, e } function a(e, i) { for (var r, a = e.match(t.key); void 0 !== (r = a.pop());)if (t.push.test(r)) { var u = s(e.replace(/\[\]$/, "")); i = n([], u, i) } else t.fixed.test(r) ? i = n([], r, i) : t.named.test(r) && (i = n({}, r, i)); return i } function s(e) { return void 0 === h[e] && (h[e] = 0), h[e]++ } function u(e) { switch (i('[name="' + e.name + '"]', r).attr("type")) { case "checkbox": return "on" === e.value ? !0 : e.value; default: return e.value } } function f(i) { if (!t.validate.test(i.name)) return this; var r = a(i.name, u(i)); return l = e.extend(!0, l, r), this } function d(i) { if (!e.isArray(i)) throw new Error("formSerializer.addPairs expects an Array"); for (var r = 0, t = i.length; t > r; r++)this.addPair(i[r]); return this } function o() { return l } function c() { return JSON.stringify(o()) } var l = {}, h = {}; this.addPair = f, this.addPairs = d, this.serialize = o, this.serializeJSON = c } var t = { validate: /^[a-z_][a-z0-9_]*(?:\[(?:\d*|[a-z0-9_]+)\])*$/i, key: /[a-z0-9_]+|(?=\[\])/gi, push: /^$/, fixed: /^\d+$/, named: /^[a-z0-9_]+$/i }; return r.patterns = t, r.serializeObject = function () { return new r(i, this).addPairs(this.serializeArray()).serialize() }, r.serializeJSON = function () { return new r(i, this).addPairs(this.serializeArray()).serializeJSON() }, "undefined" != typeof i.fn && (i.fn.serializeObject = r.serializeObject, i.fn.serializeJSON = r.serializeJSON), e.FormSerializer = r, r });
+
+</script>
+<script src="./script.js"></script>
+
+</html>
